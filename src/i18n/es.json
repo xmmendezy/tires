@@ -1,0 +1,9 @@
+{
+	"title": "Tires",
+	"error": {
+		"e000": "Error inesperado, vuelva a intentarlo mas tarde",
+		"e001": "Su sessión ha expirado",
+		"e003": "Este usuario no tiene permiso para acceder",
+		"e004": "No se ha encontrado el recurso web"
+	}
+}

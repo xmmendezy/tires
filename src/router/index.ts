@@ -6,8 +6,8 @@ Vue.use(VueRouter);
 const routes: Array<RouteConfig> = [
 	{
 		path: '',
-		name: 'AppBase',
-		component: () => import(/* webpackChunkName: "app-base" */ '@app/pages/AppBase.vue'),
+		name: 'Home',
+		component: () => import(/* webpackChunkName: "home" */ '@app/pages/Home.vue'),
 	},
 ];
 

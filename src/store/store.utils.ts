@@ -1,19 +1,3 @@
-import { ICountry } from './util.module/util.type';
-import {
-	DateTime as LuxonDateTime,
-	DateTimeOptions as LuxonDateTimeOptions,
-	DateObject,
-	Duration as DurationLuxon,
-	DurationOptions,
-	DurationObject,
-} from 'luxon';
-
-import { IUser } from './api.module/api.type';
-
-type DataDict = string | number | boolean | Date | null | undefined | DataDict[] | Dict;
-
-type Dict = { [key: string]: DataDict };
-
 interface ConfigStore {
 	origin: string;
 	Api: string;
@@ -114,18 +98,10 @@ interface IHeader {
 	'Content-Type': string;
 }
 
-interface IBaseStore {
-	headers: IHeader;
-}
-
-const get_user = function (): IUser {
-	return JSON.parse(localStorage.getItem('user') || '{}') as IUser;
-};
-
 const get_headers = function (): IHeader {
 	if (localStorage.getItem('accessToken') || undefined) {
 		return {
-			Authorization: 'Bearer ' + localStorage.getItem('accessToken') || undefined,
+			Authorization: 'DOLAPIKEY: ' + localStorage.getItem('accessToken') || undefined,
 			'Content-Type': 'application/json',
 		};
 	} else {
@@ -133,30 +109,6 @@ const get_headers = function (): IHeader {
 			'Content-Type': 'application/json',
 		};
 	}
-};
-
-const get_country = async function (e: any, id?: string): Promise<ICountry> {
-	return await e.$store.dispatch('util/get_country', id, { root: true });
-};
-
-const user_is_admin = function (): boolean {
-	const user = JSON.parse(localStorage.getItem('user') || '{}');
-	return user?.role === 'admin';
-};
-
-const set_data = async function (
-	e: any,
-	data: { key: string; data: DataDict; only_store?: boolean },
-): Promise<DataDict> {
-	return await e.$store.dispatch('util/set_data', data, { root: true });
-};
-
-const clear_data = async function (e: any, key?: string): Promise<void> {
-	return await e.$store.dispatch('util/clear_data', key, { root: true });
-};
-
-const get_data = async function (e: any, key: string): Promise<DataDict> {
-	return await e.$store.dispatch('util/get_data', key, { root: true });
 };
 
 const get_errors = function (e: any): string {
@@ -184,63 +136,4 @@ const get_errors = function (e: any): string {
 	return '';
 };
 
-type DateTimeOptions = LuxonDateTimeOptions & { keepLocalTime?: boolean };
-
-type DateTimeFunc = {
-	utc: () => LuxonDateTime;
-	now: () => LuxonDateTime;
-	local: (
-		year?: number,
-		month?: number,
-		day?: number,
-		hour?: number,
-		minute?: number,
-		second?: number,
-		millisecond?: number,
-	) => LuxonDateTime;
-	fromISO: (text: string, options?: DateTimeOptions) => LuxonDateTime;
-	fromUnix: (seconds: number, options?: DateTimeOptions) => LuxonDateTime;
-	fromDate: (date: Date, options?: DateTimeOptions) => LuxonDateTime;
-	fromFormat: (text: string, format: string, options?: DateTimeOptions) => LuxonDateTime;
-	fromObject: (obj: DateObject, options: { keepLocalTime?: boolean }) => LuxonDateTime;
-	clone: (datetime: LuxonDateTime) => LuxonDateTime;
-};
-
-type DurationFunc = {
-	fromISO: (text: string, options?: DurationOptions) => DurationLuxon;
-	fromISOTime: (text: string, options?: DurationOptions) => DurationLuxon;
-	fromMillis: (number: number, options?: DurationOptions) => DurationLuxon;
-	fromObject: (Object: DurationObject) => DurationLuxon;
-};
-
-function DateTime(e: any): DateTimeFunc {
-	return e.$store.rootGetters['auth/DateTime'] as DateTimeFunc;
-}
-
-function Duration(e: any): DurationFunc {
-	return e.$store.rootGetters['util/Duration'] as DurationFunc;
-}
-
-export {
-	HttpBase,
-	HttpRequestConfig,
-	ConfigStore,
-	IHeader,
-	IBaseStore,
-	DataDict,
-	Dict,
-	DateTimeOptions,
-	DateTimeFunc,
-	DurationFunc,
-	DateObject,
-	DateTime,
-	Duration,
-	get_user,
-	get_headers,
-	user_is_admin,
-	get_country,
-	set_data,
-	clear_data,
-	get_data,
-	get_errors,
-};
+export { HttpBase, HttpRequestConfig, ConfigStore, IHeader, get_headers, get_errors };

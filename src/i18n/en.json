@@ -1,9 +1,0 @@
-{
-	"title": "Tires",
-	"error": {
-		"e000": "Unexpected error, please try again later",
-		"e001": "Your session has expired",
-		"e003": "This user does not have permission to access",
-		"e004": "Web resource not found"
-	}
-}

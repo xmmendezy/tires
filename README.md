@@ -20,10 +20,12 @@ Para instalar las dependencias del proyecto necesita Node.js, en este caso se us
 
 Para ejecutar el proyecto en modo de desarrollador utilizar el siguiente comando en la raíz de este proyecto:
 
-`npm run serve`
+`npm run dev`
 
 Para compilar el proyecto para producción utilizar el siguiente comando en la raíz de este proyecto:
 
 `npm run build`
 
-El contenido de la carpeta `dist` luego de compilar el proyecto son todos los archivos necesarios que deben ser servidos a los clientes en la web.
+Para ejecutar el proyecto en modo de producción utilizar el siguiente comando en la raíz de este proyecto:
+
+`npm run start`

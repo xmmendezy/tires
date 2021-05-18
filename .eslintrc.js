@@ -1,6 +1,7 @@
 module.exports = {
 	root: true,
 	env: {
+		browser: true,
 		node: true,
 	},
 	extends: [
@@ -17,7 +18,7 @@ module.exports = {
 		semi: [1, 'always'],
 		'comma-dangle': ['error', 'always-multiline'],
 		indent: ['error', 'tab', { SwitchCase: 1 }],
-		'max-lines': ['error', 2000],
+		'max-lines': ['error', 3000],
 		quotes: ['error', 'single'],
 		'prefer-const': 'error',
 		'no-var': 'error',

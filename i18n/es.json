@@ -1,0 +1,43 @@
+{
+	"title": "Tires",
+	"login": {
+		"a": "Iniciar sesión",
+		"b": "Correo",
+		"c": "Contraseña",
+		"d": "He olvidado mi contraseña",
+		"e": "Ingresar",
+		"f": "Registrarse",
+		"error": {
+			"e000": "Ha ocurrido un error, confirme su usuario y contraseña, y vuelva a intentar",
+			"u1": "No se ha encontrado el usuario",
+			"u2": "La contraseña no coinciden",
+			"u3": "Sesión experada",
+			"u5": "No se ha podido recuperar la contraseña"
+		}
+	},
+	"helper": {
+		"welcome": "Bienvenido",
+		"support": "Soporte",
+		"home": "Inicio",
+		"search": "Buscar producto",
+		"not_found": "Sin resultados",
+		"setting": "Configuración",
+		"logout": "Salir",
+		"locale": "Idioma",
+		"see": "Ver",
+		"prev": "Regresar",
+		"next": "Continuar",
+		"confirm": "Confirmar",
+		"finish": "Terminar",
+		"cancel": "Cancelar",
+		"continue_task": "¿Continuar con esta opción?",
+		"success_task": "Tarea realizada con éxito",
+		"error_task": "No se pudo procesar"
+	},
+	"error": {
+		"e000": "Error inesperado, vuelva a intentarlo mas tarde",
+		"e001": "Su sessión ha expirado",
+		"e003": "Este usuario no tiene permiso para acceder",
+		"e004": "No se ha encontrado el recurso web"
+	}
+}

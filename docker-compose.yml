@@ -6,6 +6,8 @@ services:
         environment:
             MYSQL_ROOT_PASSWORD: root
             MYSQL_DATABASE: dolibarr
+        ports:
+          - "3306:3306"
 
     web:
         image: tuxgasy/dolibarr

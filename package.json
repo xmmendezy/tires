@@ -46,28 +46,16 @@
 		"vuex-class-component": "^2.3.5"
 	},
 	"devDependencies": {
-		"@babel/core": "^7.14.3",
-		"@babel/eslint-parser": "^7.14.3",
-		"@nuxt/types": "^0.4.1",
-		"@nuxt/typescript-build": "^0.3.10",
+		"@nuxt/types": "^2.15.3",
+		"@nuxt/typescript-build": "^2.1.0",
 		"@nuxtjs/eslint-config-typescript": "^6.0.0",
 		"@nuxtjs/eslint-module": "^3.0.2",
-		"consola": "*",
-		"defu": "^5.0.0",
-		"eslint": "^7.26.0",
-		"eslint-config-prettier": "^8.3.0",
+		"babel-eslint": "^10.1.0",
+		"eslint": "^7.22.0",
+		"eslint-config-prettier": "^8.1.0",
 		"eslint-plugin-nuxt": "^2.0.0",
-		"eslint-plugin-prettier": "^3.4.0",
-		"eslint-plugin-vue": "^7.9.0",
-		"fibers": "^5.0.0",
-		"node-fetch": "^2.6.1",
-		"prettier": "^2.3.0",
-		"sass": "^1.33.0",
-		"sass-loader": "^10.2.0",
-		"ufo": "^0.7.5",
-		"vue-client-only": "^2.0.0",
-		"vue-no-ssr": "^1.1.1",
-		"vue-template-compiler": "^2.6.12",
-		"webpack": "^5.37.1"
+		"eslint-plugin-prettier": "^3.3.1",
+		"eslint-plugin-vue": "^7.7.0",
+		"prettier": "^2.2.1"
 	}
 }

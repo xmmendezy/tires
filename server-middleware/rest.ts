@@ -15,9 +15,15 @@ app.get('*', (req, res) => {
 	if (req.headers.dolapikey) {
 		headers.dolapikey = req.headers.dolapikey as string;
 	}
-	axios.get(`${config.Api}${req.path}`, { params: req.query, headers }).then(response => {
-		res.json(response.data);
-	});
+	console.log(`${config.Api}${req.path}`);
+	axios
+		.get(`${config.Api}${req.path}`, { params: req.query, headers })
+		.then(response => {
+			res.json(response.data);
+		})
+		.catch(e => {
+			res.json(e);
+		});
 });
 
 export default app;

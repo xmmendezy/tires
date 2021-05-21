@@ -101,7 +101,7 @@ export default class ApiStore extends VuexModule {
 	@action
 	public async get_products(): Promise<Product[]> {
 		return await ApiStore.http
-			.get(this.url.products, { params: { category: 11 }, headers: this.headers })
+			.get(this.url.products, {headers: this.headers })
 			.then(async response => {
 				const error = get_errors(response);
 				if (error) {

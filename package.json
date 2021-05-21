@@ -17,19 +17,19 @@
 	"dependencies": {
 		"@fortawesome/fontawesome-free": "^5.15.3",
 		"@nuxtjs/auth-next": "5.0.0-1620773067.c356fed",
-		"@nuxtjs/axios": "^5.13.4",
+		"@nuxtjs/axios": "^5.13.1",
 		"@nuxtjs/pwa": "^3.3.5",
 		"axios": "^0.21.1",
 		"body-parser": "^1.19.0",
 		"buefy": "^0.9.7",
 		"bulma": "^0.9.2",
 		"cookie": "^0.4.1",
-		"core-js": "^3.12.1",
+		"core-js": "^3.9.1",
 		"express": "^4.17.1",
 		"js-cookie": "^2.2.1",
 		"jwt-decode": "^3.1.2",
-		"nuxt": "^2.15.6",
-		"nuxt-buefy": "^0.4.7",
+		"nuxt": "^2.2.0",
+		"nuxt-buefy": "^0.4.4",
 		"nuxt-i18n": "^6.27.0",
 		"nuxt-property-decorator": "^2.9.1",
 		"nuxt-start": "^2.15.6",
@@ -56,6 +56,8 @@
 		"eslint-plugin-nuxt": "^2.0.0",
 		"eslint-plugin-prettier": "^3.3.1",
 		"eslint-plugin-vue": "^7.7.0",
-		"prettier": "^2.2.1"
+		"node-sass": "^4.14.1",
+		"prettier": "^2.2.1",
+		"sass-loader": "^8.0.2"
 	}
 }

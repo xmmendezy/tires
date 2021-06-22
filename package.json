@@ -10,7 +10,7 @@
 		"generate": "nuxt generate",
 		"start": "nuxt start",
 		"docker": "docker-compose up",
-		"lint": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
+		"lint": "eslint --ext \".ts,.js,.vue\" --ignore-path .gitignore .",
 		"prelint": "npm run prettier",
 		"prettier": "prettier --write 'src/**/*.{vue,ts,tsx,js,jsx,json,scss,css}'"
 	},
